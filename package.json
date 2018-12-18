@@ -1,19 +1,25 @@
 {
-    "name": "micro-playground",
-    "version": "1.0.0",
-    "description": "Playing with micro",
-    "main": "index.js",
-    "scripts": {
-        "dev": "micro-dev api/index.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Alex Price (@remotealex)",
-    "license": "MIT",
-    "dependencies": {
-        "micro": "^9.3.3"
-    },
-    "devDependencies": {
-        "micro-dev": "^3.0.0",
-        "micro-fork": "^0.1.1"
-    }
+  "name": "micro-playground",
+  "version": "1.0.0",
+  "description": "Playing with micro",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"micro-dev src/api/index.js -p 4444\" \"next src/web -p 3333\" \"micro-proxy -r rules.json -p 3000\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Price (@remotealex)",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
+    "micro": "^9.3.3",
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "micro-dev": "^3.0.0",
+    "micro-fork": "^0.1.1",
+    "micro-proxy": "^1.1.0"
+  }
 }

@@ -1,5 +1,8 @@
 {
-    "version": 2,
-    "alias": ["micro-playground"],
-    "builds": [{ "src": "api/*.js", "use": "@now/node" }]
+  "version": 2,
+  "alias": ["micro-playground"],
+  "builds": [
+    { "src": "src/api/*.js", "use": "@now/node" },
+    { "src": "src/web/*.js", "use": "@now/next" }
+  ]
 }
