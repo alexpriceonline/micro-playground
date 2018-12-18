@@ -1,0 +1,19 @@
+{
+    "name": "micro-playground",
+    "version": "1.0.0",
+    "description": "Playing with micro",
+    "main": "index.js",
+    "scripts": {
+        "dev": "micro-dev api/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Alex Price (@remotealex)",
+    "license": "MIT",
+    "dependencies": {
+        "micro": "^9.3.3"
+    },
+    "devDependencies": {
+        "micro-dev": "^3.0.0",
+        "micro-fork": "^0.1.1"
+    }
+}

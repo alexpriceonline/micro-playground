@@ -1,0 +1,5 @@
+{
+    "version": 2,
+    "alias": ["micro-playground"],
+    "builds": [{ "src": "api/*.js", "use": "@now/node" }]
+}
