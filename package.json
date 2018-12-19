@@ -6,12 +6,16 @@
   "scripts": {
     "dev": "concurrently \"next www -p 3333\" \"micro-dev api/index.js -p 4444\" \"micro-proxy -r rules.json -p 3000\"",
     "test": "ava",
+    "watch:test": "ava --watch",
     "deploy": "now && now alias"
   },
   "author": "Alex Price (@remotealex)",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^3.0.2",
+    "jsonwebtoken": "^8.4.0",
     "micro": "^9.3.3",
+    "mongoose": "^5.4.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
