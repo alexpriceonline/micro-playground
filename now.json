@@ -2,7 +2,11 @@
   "version": 2,
   "alias": ["micro-playground"],
   "builds": [
-    { "src": "src/api/*.js", "use": "@now/node" },
-    { "src": "src/web/*.js", "use": "@now/next" }
+    { "src": "api/*.js", "use": "@now/node" },
+    { "src": "www/package.json", "use": "@now/next" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "api/$1" },
+    { "src": "/(.*)", "dest": "www/$1" }
   ]
 }

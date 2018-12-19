@@ -11,7 +11,7 @@ const welcome = require("./welcome");
 const notfound = (req, res) => send(res, 404, "Not found route");
 
 module.exports = router()(
-  get("/api/auth", auth),
-  get("/api/welcome", welcome),
+  get("/api/auth.js", auth),
+  get("/api/welcome.js", welcome),
   get("/*", notfound)
 );
