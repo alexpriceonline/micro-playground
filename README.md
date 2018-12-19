@@ -2,6 +2,8 @@
 
 Zeit NextJS + Micro monorepo
 
-## TODO
+This repo includes a nextjs app (in the `www` dir) and some micro lambdas (in the `api` dir).
 
-https://github.com/zeit/micro#testing
+I'm using the `micro-fork` package for routing the lambdas in development and `micro-proxy` for proxying the api development server onto `/api`.
+
+Tests using `ava`.
