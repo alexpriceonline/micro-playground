@@ -22,11 +22,21 @@
   "devDependencies": {
     "ava": "^1.0.1",
     "concurrently": "^4.1.0",
+    "faker": "^4.1.0",
     "isomorphic-unfetch": "^3.0.0",
     "micro-dev": "^3.0.0",
     "micro-fork": "^0.1.1",
     "micro-proxy": "^1.1.0",
     "next": "^7.0.2",
     "test-listen": "^1.1.0"
+  },
+  "ava": {
+    "files": [
+      "api/**/*.test.js",
+      "lib/**/*.test.js"
+    ],
+    "serial": true,
+    "cache": true,
+    "verbose": true
   }
 }

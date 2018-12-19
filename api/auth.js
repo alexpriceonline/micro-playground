@@ -1,16 +1,15 @@
 const { send, json } = require("micro");
 const jwt = require("jsonwebtoken");
 
-const checkUser = require("../lib/helpers/check-user");
-
-const JWT_SECRET = "SECRET";
+const checkUser = require("../lib/fns/check-user");
+const { JWT_SECRET } = require("../lib/constants");
 
 module.exports = async (req, res) => {
   try {
     const { email, password } = await json(req);
 
     // Check the user exists and password is correct
-    const user = checkUser(email, password);
+    const user = await checkUser(email, password);
 
     // If there is no user, return 401
     if (!user) {
@@ -25,9 +24,7 @@ module.exports = async (req, res) => {
         fullName: user.firstName + " " + user.lastName
       },
       JWT_SECRET,
-      {
-        expiresIn: 86400 // expires in 24 hours
-      }
+      { expiresIn: "30 days" }
     );
 
     send(res, 200, { success: true, token });
