@@ -15,14 +15,17 @@
     "bcrypt": "^3.0.2",
     "jsonwebtoken": "^8.4.0",
     "micro": "^9.3.3",
+    "micro-jwt-auth": "^1.10.0",
     "mongoose": "^5.4.0",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "remove": "^0.1.5"
   },
   "devDependencies": {
     "ava": "^1.0.1",
     "concurrently": "^4.1.0",
     "faker": "^4.1.0",
+    "fs-router": "^0.4.1",
     "isomorphic-unfetch": "^3.0.0",
     "micro-dev": "^3.0.0",
     "micro-fork": "^0.1.1",

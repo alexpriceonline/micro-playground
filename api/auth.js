@@ -29,6 +29,6 @@ module.exports = async (req, res) => {
 
     send(res, 200, { success: true, token });
   } catch (err) {
-    send(res, 500, { success: false, msg: err });
+    send(res, 500, "Unexpected error");
   }
 };

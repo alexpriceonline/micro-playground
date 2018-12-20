@@ -15,7 +15,10 @@ const password = faker.internet.password();
 
 test.before(async t => {
   // Connect to the local db
-  mongoose.connect("mongodb://localhost:27017/testing");
+  mongoose.connect(
+    "mongodb://localhost:27017/testing",
+    { useNewUrlParser: true }
+  );
 
   // Create a user
   await new User({ email, password }).save();

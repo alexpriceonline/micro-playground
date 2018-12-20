@@ -5,6 +5,10 @@
       "method": ["GET", "POST", "OPTIONS"],
       "dest": "http://localhost:4444"
     },
-    { "pathname": "/**", "dest": "http://localhost:3333" }
+    {
+      "pathname": "/**",
+      "method": ["GET"],
+      "dest": "http://localhost:3333"
+    }
   ]
 }
